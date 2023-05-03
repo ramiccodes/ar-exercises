@@ -7,4 +7,7 @@ require_relative './exercise_4'
 puts "Exercise 5"
 puts "----------"
 
-# Your code goes here ...
+puts "Total stores revenue: #{Store.sum(:annual_revenue)}"
+puts "Stores average revenue: #{Store.average(:annual_revenue)}"
+puts "Stores less than $1 million annual revenue: #{Store.where(["annual_revenue < ?", 1000000]).size}"
+
